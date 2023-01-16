@@ -45,6 +45,7 @@ button {
 button:hover {
     background-color: transparent;
     color: var(--primary-color);
+    transition: background-color 0.3s ease-out;
 }
 
 .highlight {
@@ -264,6 +265,15 @@ section.facts p {
     padding: 45px 35px;
     border: 1px solid var(--primary-color);
     border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.fact-item:hover {
+    border-width: 3px;
+    padding: 43px 33px;
+    transform: rotate(5deg);
+    transition: transform 0.3s;
 }
 
 .fact-item h3 {
@@ -278,6 +288,103 @@ section.facts p {
     font-size: 20px;
     line-height: 23px;
     color: #727272;
+}
+
+/* Pricing */
+section.pricing {
+    padding: 60px 0;
+    background-color: #fff4e6;
+}
+
+section.pricing .container {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.pricing-content {
+    width: 40%;
+}
+
+section.pricing h2 {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 53px;
+}
+
+.pricing-table {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.pricing-card {
+    padding: 3rem 4rem;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.pricing-card .price {
+    display: flex;
+}
+
+.price-currency {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-right: 0.2rem;
+    padding-top: 0.4rem;
+}
+
+.price-value {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.price-duration {
+    font-size: .8rem;
+    font-weight: 500;
+    color: #60697b;
+    margin-top: auto;
+    margin-bottom: 0.25rem;
+}
+
+.price-duration:before {
+    content: "/";
+    padding: 0;
+}
+
+h4.card-title {
+    padding: 15px 0;
+    font-size: 20px;
+}
+
+.pricing-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+ul.pricing-features {
+    list-style: none;
+}
+
+ul.pricing-features li {
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: #60697b;
+}
+
+ul.pricing-features li i {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #dce7f9;
+    color: #3f78e0;
 }
 
 /* Sponsors */
@@ -324,4 +431,240 @@ section.sponsors p {
 
 .footer-copyright p {
     color: #424242;
+}
+
+/* Responsive */
+@media only screen and (max-width: 991px) {
+    .container {
+        width: 100%;
+        padding: 0 15px !important;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .about-content h2,
+    .feature-content h2,
+    .facts h2,
+    .experience h2,
+    .pricing h2,
+    .sponsors h2 {
+        font-size: 40px;
+    }
+
+    .our-features .container {
+        gap: 20px;
+    }
+
+    .experience {
+        position: relative;
+        bottom: unset;
+        left: unset;
+        padding: 30px 20px;
+        margin-top: 20px;
+    }
+
+    .experience h2 {
+        line-height: 38px;
+    }
+
+    .experience h4 {
+        font-size: 26px;
+        line-height: 28px;
+    }
+
+    .feature-content h2 {
+        margin-right: 0px;
+        line-height: 53px;
+    }
+
+    section.facts {
+        text-align: center;
+    }
+
+    section.facts p {
+        width: 100%;
+    }
+
+    .fact-items {
+        padding: 30px;
+        display: grid;
+        justify-content: space-between;
+        text-align: center;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        grid-gap: 20px;
+    }
+
+    .fact-item {
+        width: 100%;
+    }
+
+    section.pricing {
+        padding: 40px 0;
+    }
+
+    section.pricing .container {
+        gap: unset;
+        flex-direction: column;
+    }
+
+    .pricing-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pricing-table {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .our-sponsors {
+        margin: 50px 0;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        grid-gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 0 15px !important;
+    }
+
+    button {
+        padding: 10px 25px;
+        font-size: 18px;
+    }
+
+    .col-2 {
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    .logo h1 {
+        font-size: 32px;
+    }
+
+    .primary-nav ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    section.about-us {
+        padding: 40px 0;
+    }
+
+    section.about-us .container {
+        gap: 50px;
+        flex-direction: column;
+    }
+
+    .about-content h2,
+    .feature-content h2,
+    .facts h2,
+    .experience h2,
+    .pricing h2,
+    .sponsors h2 {
+        font-size: 32px !important;
+        line-height: 38px !important;
+    }
+
+    section.our-features {
+        padding: 40px 0;
+    }
+
+    .our-features .container {
+        display: block;
+    }
+
+    .feature-item {
+        margin-bottom: 15px;
+        padding: 15px 20px;
+    }
+
+    .experience {
+        position: relative;
+        bottom: unset;
+        left: unset;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    .experience h4 {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    section.facts {
+        padding: 40px 0;
+    }
+
+    section.facts p {
+        width: 100%;
+    }
+
+    .fact-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .fact-item {
+        width: 100%;
+        padding: 30px 35px;
+    }
+
+    section.pricing {
+        padding: 40px 0;
+    }
+
+    section.pricing .container {
+        gap: unset;
+        flex-direction: column;
+    }
+
+    .pricing-content {
+        width: 100%;
+    }
+
+    .pricing-table {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .our-sponsors {
+        margin: 50px 0;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        grid-gap: 20px;
+    }
+
+    section.sponsors p {
+        width: 100%;
+    }
 }
